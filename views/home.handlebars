@@ -8,8 +8,10 @@
     <th>ID</th>
     <th>Age</th>
   </tr>
+  {{#each results}}
   <tr>
-    <td>{{results.name}}</td>
-    <td>{{results.id}}</td>
-    <td>{{results.age}}</td>
+    <td>{{this.name}}</td>
+    <td>{{this.id}}</td>
+    <td>{{this.age}}</td>
   </tr>
+  {{/each}}
