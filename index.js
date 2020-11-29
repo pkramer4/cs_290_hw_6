@@ -54,6 +54,7 @@ app.get('/',function(req,res,next){
       next(err);
       return;
     }
+    context.test = 'test';
     context.results = JSON.stringify(rows);
     res.render('home', context);
   });
