@@ -55,7 +55,9 @@ app.get('/',function(req,res,next){
       return;
     }
     context.test = 'test';
-    context.results = JSON.stringify(rows);
+    let context_list = [];
+    context_list.push(JSON.stringify(rows));
+    context.results = context_list;
     res.render('home', context);
   });
 });
