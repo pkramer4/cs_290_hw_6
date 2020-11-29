@@ -1,6 +1,6 @@
 <h1>This is a test</h1>
 
-<p class="results"> {{results}} </p>
+<p class="results"> {{workouts}} </p>
 <p class="test"> {{test}} </p>
 
 <table>
@@ -9,14 +9,11 @@
     <th>ID</th>
     <th>Age</th>
   </tr>
-  {{#each results}}
+  {{#each workouts}}
   <tr>
     <td>{{this.name}}</td>
     <td>{{this.id}}</td>
     <td>{{this.age}}</td>
+    <td><button onclick = 'clearRow()'>Delete</button></td>
   </tr>
   {{/each}}
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>

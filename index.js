@@ -54,13 +54,11 @@ app.get('/',function(req,res,next){
       next(err);
       return;
     }
-    context.test = 'test';
-    let context_list = [];
-    context_list.push(JSON.stringify(rows));
-    context.results = context_list;
+    let workouts = rows;
+    context.workouts = workouts;
     res.render('home', context);
   });
-
+});
 app.use(function(req,res){
   res.status(404);
   res.render('404');
