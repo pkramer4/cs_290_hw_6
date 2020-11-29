@@ -60,7 +60,6 @@ app.get('/',function(req,res,next){
     context.results = context_list;
     res.render('home', context);
   });
-});
 
 app.use(function(req,res){
   res.status(404);
