@@ -1,0 +1,22 @@
+.hidden {
+  opacity: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
+}
+
+h2 {
+  margin-left: 60px;
+}
+
+table,td,th{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+input {
+  margin-bottom: 10px;
+}

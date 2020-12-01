@@ -1,19 +1,59 @@
-<h1>This is a test</h1>
+<h1>Workout Tracker</h1>
 
-<p class="results"> {{workouts}} </p>
-<p class="test"> {{test}} </p>
+<h2>Enter a new workout below</h2>
+<form class="" action="/" method="POST">
+  <label for="nameVal">Exercise name</label><br>
+  <input id = 'nameVal' type="text" name="name" value=""><br>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>ID</th>
-    <th>Age</th>
-  </tr>
-  {{#each workouts}}
-  <tr>
-    <td>{{this.name}}</td>
-    <td>{{this.id}}</td>
-    <td>{{this.age}}</td>
-    <td><button onclick = 'clearRow()'>Delete</button></td>
-  </tr>
-  {{/each}}
+  <label for="repVal">Number of reps</label><br>
+  <input id = 'repVal' type="text" name="reps" value=""><br>
+
+  <label for="weightVal">Weight</label><br>
+  <input id = 'weightVal' type="text" name="weight" value=""><br>
+
+  <label for="unitVal">Weight units</label><br>
+  <input id = 'unitVal' type="text" name="unit" value=""><br>
+
+  <label for="dateVal">Date performed</label><br>
+  <input id = 'dateVal' type="text" name="date" value=""><br>
+
+  <input id='subButton' type="submit" value="submit">
+</form>
+
+<h2>Workouts performed</h2>
+<div id = 'container'>
+  <table id='workoutTable2'>
+      <tr>
+        <th>Name</th>
+        <th>Reps</th>
+        <th>Weight</th>
+        <th>Unit</th>
+        <th>Date performed</th>
+      </tr>
+
+  </table>
+
+</div>
+
+<h2 id = 'updateHeader' class = 'hidden'>Update Exercise</h2>
+<form id = 'updateForm' class="updater hidden" action="/" method="POST">
+  <label for="nameUp">Exercise name</label><br>
+  <input id = 'nameUp' type="text" name="name" value=""><br>
+
+  <label for="repUp">Number of reps</label><br>
+  <input id = 'repUp' type="text" name="id" value=""><br>
+
+  <label for="weightUp">Weight</label><br>
+  <input id = 'weightUp' type="text" name="age" value=""><br>
+
+  <label for="unitUp">Weight units</label><br>
+  <input id = 'unitUp' type="text" name="age" value=""><br>
+
+  <label for="dateUp">Date performed</label><br>
+  <input id = 'dateUp' type="text" name="age" value=""><br>
+
+  <input id='updateButton' type="submit" value="update">
+
+</form>
+
+<script src="js/script.js" defer></script>
